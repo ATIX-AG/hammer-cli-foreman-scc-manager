@@ -38,3 +38,16 @@ namespace :pkg do
   desc 'Generate package source gem'
   task generate_source: :build
 end
+
+task default: :test
+
+begin
+  require 'rubocop/rake_task'
+  RuboCop::RakeTask.new
+rescue StandardError => _e
+  puts 'Rubocop not loaded.'
+end
+
+task :default do
+  Rake::Task['rubocop'].execute
+end
