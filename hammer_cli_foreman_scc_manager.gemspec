@@ -13,14 +13,14 @@ Gem::Specification.new do |spec|
   spec.platform      = Gem::Platform::RUBY
   spec.summary       = 'Foreman SCC Manager plugin for Hammer CLI'
 
-  spec.files         = Dir['{lib,config}/**/*', 'LICENSE', 'README*']
+  spec.files         = Dir['{lib,config}/**/*', 'LICENSE', 'README*'] + Dir["locale/**/*.{po,pot,mo}"]
   spec.require_paths = ['lib']
   spec.test_files    = Dir['{test}/**/*']
 
   spec.add_dependency 'hammer_cli_foreman', '>= 0.12.0'
   spec.required_ruby_version = 2.5
 
-  spec.add_development_dependency 'bundler', '~> 1.16'
+  spec.add_development_dependency 'bundler'
   spec.add_development_dependency 'minitest', '~> 5.0'
   spec.add_development_dependency 'rake', '~> 10.0'
 
