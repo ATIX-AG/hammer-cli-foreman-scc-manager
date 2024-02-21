@@ -18,7 +18,7 @@ Gem::Specification.new do |spec|
   spec.test_files    = Dir['{test}/**/*']
 
   spec.add_dependency 'hammer_cli_foreman', '~> 0.12.0', '<= 3.9.0'
-  spec.required_ruby_version = 2.5
+  spec.required_ruby_version = '~> 2.7'
 
   spec.add_development_dependency 'bundler', '< 2.5'
   spec.add_development_dependency 'minitest', '~> 5.0'
