@@ -1,13 +1,10 @@
-# TODO: remove this file by either moving cops here or fixing code
-inherit_from:
-  - .rubocop_todo.yml
-
 AllCops:
   TargetRubyVersion: 2.5
   Exclude:
     - '*.spec'
     - 'doc/plugins/**'
     - 'locale/**'
+    - 'vendor/**/*'
 
 # Don't enforce documentation
 Style/Documentation:
@@ -153,4 +150,3 @@ Style/RedundantArgument: # (new in 1.4)
 
 Style/SwapValues: # (new in 1.1)
   Enabled: true
-
