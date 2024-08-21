@@ -25,5 +25,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'rake', '~> 12.0'
 
   spec.add_development_dependency 'rdoc', '~> 4'
-  spec.add_development_dependency 'rubocop', '~> 1.6.1'
+  spec.add_development_dependency 'theforeman-rubocop', '~> 0.1.2'
 end

@@ -12,7 +12,7 @@ end
 
 namespace :gettext do
   desc 'Update pot file'
-  task :setup do
+  task setup: :environment do
     require 'hammer_cli_foreman_scc_manager/version'
     require 'hammer_cli_foreman_scc_manager/i18n'
     require 'gettext/tools/task'

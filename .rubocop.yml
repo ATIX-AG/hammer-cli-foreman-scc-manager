@@ -1,5 +1,10 @@
+inherit_gem:
+  theforeman-rubocop:
+    - default.yml
+
 AllCops:
   TargetRubyVersion: 2.7
+  SuggestExtensions: false
   Exclude:
     - '*.spec'
     - 'doc/plugins/**'
@@ -13,55 +18,13 @@ Style/Documentation:
 Metrics/MethodLength:
   Max: 40
 
-Naming/AccessorMethodName:
-  Enabled: false
-
-Style/RedundantSelf:
-  Enabled: false
-
-Metrics/ClassLength:
-  Max: 500
-
 Naming/FileName:
   Exclude:
-      - 'db/seeds.d/*'
-
-Style/WordArray:
-  Enabled: false
-
-Style/RescueModifier:
-  Enabled: false
-
-Style/ClassAndModuleChildren:
-  Enabled: false
-
-Style/EachWithObject:
-  Enabled: false
-
-Metrics/ParameterLists:
-  Enabled: false
-
-# Support both ruby19 and hash_rockets
-Style/HashSyntax:
-  Enabled: false
-  SupportedStyles:
-    - ruby19
-    - hash_rocke0ts
-
-Layout/LineLength:
-  Max: 190
-
-# Offense count: 21
-# Configuration parameters: CountComments.
-Metrics/ModuleLength:
-    Max: 400
+    - 'db/seeds.d/*'
 
 Naming/MethodName:
   Exclude:
     - 'app/models/concerns/orchestration/*.rb'
-
-Style/SymbolArray:
-  Enabled: false
 
 Style/FormatString:
   Enabled: false
@@ -73,80 +36,5 @@ Style/FormatStringToken:
 Style/FrozenStringLiteralComment:
   Enabled: false
 
-Style/NumericPredicate:
-  Enabled: false
-
-Style/RegexpLiteral:
-  Enabled: false
-
 Metrics/AbcSize:
   Enabled: false
-
-Metrics/BlockLength:
-  Enabled: false
-
-Metrics/CyclomaticComplexity:
-  Enabled: false
-
-Metrics/PerceivedComplexity:
-  Enabled: false
-
-Style/CaseEquality:
-  Enabled: false
-
-Style/ConditionalAssignment:
-  Enabled: false
-
-Style/HashEachMethods:
-  Enabled: true
-
-Style/HashTransformKeys:
-  Enabled: true
-
-Style/HashTransformValues:
-  Enabled: true
-
-Lint/DuplicateBranch: # (new in 1.3)
-  Enabled: true
-
-Lint/DuplicateRegexpCharacterClassElement: # (new in 1.1)
-  Enabled: true
-
-Lint/EmptyBlock: # (new in 1.1)
-  Enabled: true
-
-Lint/EmptyClass: # (new in 1.3)
-  Enabled: true
-
-Lint/NoReturnInBeginEndBlocks: # (new in 1.2)
-  Enabled: true
-
-Lint/ToEnumArguments: # (new in 1.1)
-  Enabled: true
-
-Lint/UnexpectedBlockArity: # (new in 1.5)
-  Enabled: true
-
-Lint/UnmodifiedReduceAccumulator: # (new in 1.1)
-  Enabled: true
-
-Style/ArgumentsForwarding: # (new in 1.1)
-  Enabled: true
-
-Style/CollectionCompact: # (new in 1.2)
-  Enabled: true
-
-Style/DocumentDynamicEvalDefinition: # (new in 1.1)
-  Enabled: true
-
-Style/NegatedIfElseCondition: # (new in 1.2)
-  Enabled: true
-
-Style/NilLambda: # (new in 1.3)
-  Enabled: true
-
-Style/RedundantArgument: # (new in 1.4)
-  Enabled: true
-
-Style/SwapValues: # (new in 1.1)
-  Enabled: true
