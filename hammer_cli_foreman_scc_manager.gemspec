@@ -17,12 +17,12 @@ Gem::Specification.new do |spec|
   spec.require_paths = ['lib']
   spec.test_files    = Dir['{test}/**/*']
 
-  spec.add_dependency 'hammer_cli_foreman', '~> 0.12.0', '<= 3.9.0'
-  spec.required_ruby_version = '~> 2.7'
+  spec.add_dependency 'hammer_cli_foreman', '~> 3.10.0'
+  spec.required_ruby_version = '>= 2.7', '< 4'
 
   spec.add_development_dependency 'bundler', '< 2.5'
   spec.add_development_dependency 'minitest', '~> 5.0'
-  spec.add_development_dependency 'rake', '~> 10.0'
+  spec.add_development_dependency 'rake', '~> 12.0'
 
   spec.add_development_dependency 'rdoc', '~> 4'
   spec.add_development_dependency 'rubocop', '~> 1.6.1'
