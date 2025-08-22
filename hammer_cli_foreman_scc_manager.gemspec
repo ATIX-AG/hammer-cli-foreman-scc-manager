@@ -8,7 +8,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ['Nadja Heitmann']
   spec.email         = ['heitmann@atix.de']
   spec.homepage      = 'https://github.com/ATIX-AG/hammer-cli-foreman-scc-manager'
-  spec.license       = 'GPL-3.0'
+  spec.license       = 'GPL-3.0-only'
 
   spec.platform      = Gem::Platform::RUBY
   spec.summary       = 'Foreman SCC Manager plugin for Hammer CLI'
