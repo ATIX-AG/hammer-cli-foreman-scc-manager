@@ -15,12 +15,21 @@ module HammerCLIForemanSCCManager
         field :description, _('Product description')
       end
 
-      build_options
+      option '--scc-account-id', 'SCC account id', _('Id of associated scc account')
+
+      build_options do |o|
+        o.without('scc_account_id')
+      end
     end
 
     class InfoCommand < HammerCLIForeman::InfoCommand
       output SCCProductsCommand::ListCommand.output_definition
-      build_options
+
+      option '--scc-account-id', 'SCC account id', _('Id of associated scc account')
+
+      build_options do |o|
+        o.without('scc_account_id')
+      end
     end
 
     class SubscribeProductCommand < HammerCLIForeman::Command
