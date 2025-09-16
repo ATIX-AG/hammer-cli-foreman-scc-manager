@@ -26,28 +26,37 @@ module HammerCLIForemanSCCManager
 
     class InfoCommand < HammerCLIForeman::InfoCommand
       output SCCAccountsCommand::ListCommand.output_definition
-      build_options
+
+      build_options do |o|
+        o.expand.including(:organizations)
+      end
     end
 
     class CreateCommand < HammerCLIForeman::CreateCommand
       success_message _('SCC account created.')
       failure_message _('Could not create SCC account')
 
-      build_options
+      build_options do |o|
+        o.expand.including(:organizations)
+      end
     end
 
     class DeleteCommand < HammerCLIForeman::DeleteCommand
       success_message _('SCC account [%{name}] was deleted.')
       failure_message _('Could not delete the account')
 
-      build_options
+      build_options do |o|
+        o.expand.including(:organizations)
+      end
     end
 
     class UpdateCommand < HammerCLIForeman::UpdateCommand
       success_message _('SCC account [%{name}] updated.')
       failure_message _('Could not update the SCC account')
 
-      build_options
+      build_options do |o|
+        o.expand.including(:organizations)
+      end
     end
 
     class SyncCommand < HammerCLIForeman::Command
@@ -70,7 +79,9 @@ module HammerCLIForemanSCCManager
         HammerCLI::EX_TEMPFAIL
       end
 
-      build_options
+      build_options do |o|
+        o.expand.including(:organizations)
+      end
     end
 
     class TestConnectionCommand < HammerCLIForeman::Command
@@ -80,7 +91,9 @@ module HammerCLIForemanSCCManager
       success_message _('Testing connection for SCC account succeeded.')
       failure_message _('Testing connection for SCC account failed')
 
-      build_options
+      build_options do |o|
+        o.expand.including(:organizations)
+      end
     end
 
     class BulkSubscribeCommand < HammerCLIForeman::Command
@@ -90,7 +103,9 @@ module HammerCLIForemanSCCManager
       success_message _('Bulk subscribing successfully started.')
       failure_message _('Bulk subscription failed')
 
-      build_options
+      build_options do |o|
+        o.expand.including(:organizations)
+      end
     end
 
     autoload_subcommands
