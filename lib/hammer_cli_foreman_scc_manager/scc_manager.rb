@@ -3,7 +3,7 @@
 module HammerCLIForemanSCCManager
   class SCCManagerCommand < HammerCLI::AbstractCommand
     lazy_subcommand(
-      'scc_accounts',
+      %w[scc-accounts scc_accounts],
       _('Manage SCC accounts'),
       'HammerCLIForemanSCCManager::SCCAccountsCommand',
       'hammer_cli_foreman_scc_manager/scc_account'
