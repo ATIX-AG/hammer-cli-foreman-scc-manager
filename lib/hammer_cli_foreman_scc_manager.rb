@@ -7,7 +7,7 @@ module HammerCLIForemanSCCManager
   require 'hammer_cli_foreman_scc_manager/scc_account'
 
   HammerCLI::MainCommand.lazy_subcommand(
-    'scc_manager',
+    %w[scc-manager scc_manager],
     'Manage SUSE accounts and product subscriptions',
     'HammerCLIForemanSCCManager::SCCManagerCommand',
     'hammer_cli_foreman_scc_manager/scc_manager'

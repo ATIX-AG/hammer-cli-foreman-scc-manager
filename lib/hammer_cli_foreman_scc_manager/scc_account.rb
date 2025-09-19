@@ -6,7 +6,7 @@ module HammerCLIForemanSCCManager
 
     # include scc products as sub command of scc account
     lazy_subcommand(
-      'scc_products',
+      %w[scc-products scc_products],
       'Subcommands for SCC products',
       'HammerCLIForemanSCCManager::SCCProductsCommand',
       'hammer_cli_foreman_scc_manager/scc_product'
@@ -86,7 +86,7 @@ module HammerCLIForemanSCCManager
 
     class TestConnectionCommand < HammerCLIForeman::Command
       action :test_connection
-      command_name 'test_connection'
+      command_names 'test-connection', 'test_connection'
 
       success_message _('Testing connection for SCC account succeeded.')
       failure_message _('Testing connection for SCC account failed')
@@ -98,7 +98,7 @@ module HammerCLIForemanSCCManager
 
     class BulkSubscribeCommand < HammerCLIForeman::Command
       action :bulk_subscribe
-      command_name 'bulk_subscribe'
+      command_names 'bulk-subscribe', 'bulk_subscribe'
 
       success_message _('Bulk subscribing successfully started.')
       failure_message _('Bulk subscription failed')
