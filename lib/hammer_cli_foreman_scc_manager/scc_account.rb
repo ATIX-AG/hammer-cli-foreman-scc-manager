@@ -6,7 +6,7 @@ module HammerCLIForemanSCCManager
 
     # include scc products as sub command of scc account
     lazy_subcommand(
-      'scc_products',
+      %w[scc-products scc_products],
       'Subcommands for SCC products',
       'HammerCLIForemanSCCManager::SCCProductsCommand',
       'hammer_cli_foreman_scc_manager/scc_product'
