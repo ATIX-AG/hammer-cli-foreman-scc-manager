@@ -25,7 +25,11 @@ module HammerCLIForemanSCCManager
     end
 
     class InfoCommand < HammerCLIForeman::InfoCommand
-      output SCCAccountsCommand::ListCommand.output_definition
+      output SCCAccountsCommand::ListCommand.output_definition do
+        field :download_policy, _('Download policy')
+        field :mirroring_policy, _('Mirroring policy')
+        field :katello_gpg_key_id, _('Katello GPG Key')
+      end
 
       build_options do |o|
         o.expand.including(:organizations)
