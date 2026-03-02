@@ -32,4 +32,4 @@ require 'hammer_cli_foreman_scc_manager/version'
 require 'hammer_cli_foreman_scc_manager/i18n'
 require 'hammer_cli/i18n/find_task'
 HammerCLI::I18n::FindTask.define(HammerCLIForemanSCCManager::I18n::LocaleDomain.new,
-  HammerCLIForemanSCCManager.version.to_s)
+  HammerCLIForemanSCCManager.version)
